@@ -2,7 +2,6 @@ let voices = []
 
 window.speechSynthesis.addEventListener("voiceschanged", function() {
     voices = window.speechSynthesis.getVoices();
-    console.log(voices);
 });
 
 const sing = (text, rate = 1.2) => {
@@ -43,7 +42,7 @@ const playSong = async () => {
     await sing(`Hand of God deliver me`, 0.7);
     await wait(900);
     await sing(`Ohhhhh oh oh oh oh is meeeee`, 0.8);
-    await(`The first time that you touched me`, 0.7);
+    await sing(`The first time that you touched me`, 0.7);
     await wait(900);
     await sing(`Ohhhhh will wonders ever cease`, 0.8);
     await sing(`Blessed be the mystery`,0.8);
